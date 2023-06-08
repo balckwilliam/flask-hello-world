@@ -23,7 +23,7 @@ def index():
     return render_template_string("""
         <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
         <script type="text/javascript" charset="utf-8">
-            var socket = io.connect('http://' + document.domain + ':' + location.port + '/test');
+            var socket = io.connect('https://' + document.domain + ':' + location.port + '/test');
             socket.on('output', function(msg) {
                 document.getElementById('output').value += msg.data + '\\n';
             });
