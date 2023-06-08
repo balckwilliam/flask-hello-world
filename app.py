@@ -11,6 +11,3 @@ def run_cmd():
         return jsonify({'output': output.decode('utf-8')})
     except subprocess.CalledProcessError as e:
         return jsonify({'output': str(e)})
-
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000)
